@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SonOfCod.Models
 {
-	[Table("Newsletter")]
+	[Table("Newsletters")]
 	public class Newsletter
 	{
 		[Key]

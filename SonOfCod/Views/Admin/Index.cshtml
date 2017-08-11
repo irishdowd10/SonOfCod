@@ -1,0 +1,20 @@
+﻿@model IEnumerable<SonOfCod.Models.Item>
+
+<h2>Here is your list of tasks, @User.Identity.Name</h2>
+<hr />
+
+@if (Model.Any())
+{
+	<ul>
+		@foreach (var listNewsletter in Mode)
+		{
+			<li>@Html.DisplayFor(modelNewsletter => listNewsletter.Name)</li>
+		}
+	</ul>
+}
+else
+{
+	<p>No tasks have been added yet!</p>
+}
+
+@Html.ActionLink("Create new", "Create")
