@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SonOfCod.Models;
 
 namespace SonOfCod.Controllers
 {
 	public class HomeController : Controller
 	{
+		private ApplicationDbContext db = new ApplicationDbContext();
+
 		public IActionResult Index()
 		{
 			return View();
@@ -27,9 +30,9 @@ namespace SonOfCod.Controllers
 			return View();
 		}
 
-		public IActionResult Newsletter()
+		public IActionResult Subscribe()
 		{
-			ViewData["Message"] = "Your newsletter page.";
+			ViewData["Message"] = "Welcome! Please sign up for OUR newsletter.";
 
 			return View();
 		}
@@ -38,7 +41,9 @@ namespace SonOfCod.Controllers
 		{
 			ViewData["Message"] = "Your admin page.";
 
-			return View();
+			var subscriptions = db.Newsletters.ToList();
+
+			return View(subscriptions);
 		}
 
 		public IActionResult Error()

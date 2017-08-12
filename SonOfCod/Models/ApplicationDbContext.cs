@@ -19,5 +19,9 @@ namespace SonOfCod.Models
 		}
 		public DbSet<Newsletter> Newsletters { get; set; }
 		public ApplicationDbContext() { }
+		protected override void OnConfiguring(DbContextOptionsBuilder options)
+		{
+			options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SonOfCod;integrated security=True");
+		}
 	}
 }

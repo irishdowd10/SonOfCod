@@ -5,27 +5,37 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SonOfCod.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace SonOfCod.Controllers
 {
 	public class NewsletterController : Controller
 	{
 		private ApplicationDbContext db = new ApplicationDbContext();
-		//Create your newletter
-		[Authorize]
-		public IActionResult Create()
+
+		public IActionResult Index()
+		{
+			return View(db.Newsletters.ToList());
+		}
+
+		public IActionResult Details(int id)
+		{
+			var thisNewsletter= db.Newsletters.FirstOrDefault(newsletters => newsletters.Id == id);
+			return View(thisNewsletter);
+		}
+
+		public IActionResult Subscribe()
 		{
 			return View();
 		}
-		[Authorize]
+	
 		[HttpPost]
-		public IActionResult Create(Newsletter newsletter)
+		public IActionResult Subscribe(Newsletter newsletter)
 		{
 			db.Newsletters.Add(newsletter);
 			db.SaveChanges();
-			ViewBag.addedNewsletterName = db.Newsletters.Last().Name;
-			ViewBag.addedNewsletterEmail = db.Newsletters.Last().Email;
-			return View();
+			return RedirectToRoute(new { controller = "Home", action = "Index" });
+			//return RedirectToAction("Subscribe");
 		}
 	}
 }

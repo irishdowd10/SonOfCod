@@ -1,9 +1,10 @@
-﻿@{
+﻿@model IEnumerable<SonOfCod.Models.Newsletter>
+@{
 	ViewData["Title"] = "Admin";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
 
 @if (User.Identity.IsAuthenticated)
 {
@@ -18,6 +19,25 @@
 		<strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
 		<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 	</address>
+
+	<h2>Current Subscriptions: </h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var sub in Model)
+			{
+				<tr>
+					<td>@sub.Name</td>
+					<td>@sub.Email</td>
+				</tr>
+			}
+		</tbody>
+	</table>
 }
 else
 {

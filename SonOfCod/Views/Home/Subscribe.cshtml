@@ -1,16 +1,16 @@
-﻿@{
-	ViewData["Title"] = "Newsletter";
+﻿@model SonOfCod.Models.Newsletter
+@{
+	ViewData["Title"] = "Subscribe";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
 
 
-@model SonOfCod.Models.Newsletter
+
 
 <h2>Sign Up</h2>
 <hr />
-@using (Html.BeginForm())
+@using (Html.BeginForm("Subscribe", "Newsletter", FormMethod.Post))
 {
 	@Html.LabelFor(model => model.Name)
 	@Html.EditorFor(model => model.Name)
@@ -20,4 +20,5 @@
 
 	<input type="submit" value="Create" />
 }
-@Html.ActionLink("Back to List", "Index")
+
+@Html.ActionLink("Back to Home", "Index")

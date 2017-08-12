@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SonOfCod.Models.Item>
+﻿@model IEnumerable<SonOfCod.Models.Newsletter>
 
 <h2>Here is your list of tasks, @User.Identity.Name</h2>
 <hr />
@@ -6,7 +6,7 @@
 @if (Model.Any())
 {
 	<ul>
-		@foreach (var listNewsletter in Mode)
+		@foreach (var listNewsletter in Model)
 		{
 			<li>@Html.DisplayFor(modelNewsletter => listNewsletter.Name)</li>
 		}
