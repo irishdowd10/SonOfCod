@@ -18,5 +18,6 @@ namespace SonOfCod.Models
 			base.OnModelCreating(builder);
 		}
 		public DbSet<Newsletter> Newsletters { get; set; }
+		public ApplicationDbContext() { }
 	}
 }
