@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SonOfCod.Models;
+using System;
 using Xunit;
+using SonOfCod.Models;
 
-namespace SonOfCodTests
+namespace SonOfCod.Tests
 {
-    class NewsletterTest
+    public class NewsletterTest
     {
 		[Fact]
 		public void GetNameTest()
@@ -20,5 +18,5 @@ namespace SonOfCodTests
 			//Assert
 			Assert.Equal("John", result);
 		}
-	}
+    }
 }

@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SonOfCod", "SonOfCod\SonOfCod.csproj", "{76415BBD-9F85-4034-9F95-5C4373B65109}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{20A41EF6-0977-4A23-AE3C-4F5948423842}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{972D4D56-AF39-4D5D-AA93-DD787C71A93C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SonOfCodTests", "SonOfCodTests\SonOfCodTests.csproj", "{574A4EA6-15B1-4F91-8A6D-8DC5C8E92EE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonOfCod.Tests", "SonOfCod.Tests\SonOfCod.Tests.csproj", "{7FB823BC-C468-4E51-B13F-F55E18EB15CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,15 +19,15 @@ Global
 		{76415BBD-9F85-4034-9F95-5C4373B65109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76415BBD-9F85-4034-9F95-5C4373B65109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76415BBD-9F85-4034-9F95-5C4373B65109}.Release|Any CPU.Build.0 = Release|Any CPU
-		{574A4EA6-15B1-4F91-8A6D-8DC5C8E92EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{574A4EA6-15B1-4F91-8A6D-8DC5C8E92EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{574A4EA6-15B1-4F91-8A6D-8DC5C8E92EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{574A4EA6-15B1-4F91-8A6D-8DC5C8E92EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB823BC-C468-4E51-B13F-F55E18EB15CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB823BC-C468-4E51-B13F-F55E18EB15CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB823BC-C468-4E51-B13F-F55E18EB15CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB823BC-C468-4E51-B13F-F55E18EB15CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{574A4EA6-15B1-4F91-8A6D-8DC5C8E92EE0} = {20A41EF6-0977-4A23-AE3C-4F5948423842}
+		{7FB823BC-C468-4E51-B13F-F55E18EB15CA} = {972D4D56-AF39-4D5D-AA93-DD787C71A93C}
 	EndGlobalSection
 EndGlobal
