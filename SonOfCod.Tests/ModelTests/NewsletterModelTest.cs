@@ -11,6 +11,7 @@ namespace SonOfCod.Tests
 		{
 			//Arrange
 			var newsletter = new Newsletter();
+			newsletter.Name = "John";
 
 			//Act
 			var result = newsletter.Name;
